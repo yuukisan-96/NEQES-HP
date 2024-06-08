@@ -1,0 +1,290 @@
+/*--アニメーション--*/
+@keyframes fadeIn {
+    0% {}
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*--ここからヘッダー--*/
+header {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    position: fixed;
+    font-family: serif;
+    font-size: 30px;
+    z-index: 1;
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    width: 1280px;
+    height: 60px;
+    padding: 0 15px 0 15px;
+    margin: 0 auto;
+}
+
+.header__logo img {
+    display: block;
+    width: 120px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.header__logo img:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.header__nav {
+    margin-left: auto;
+}
+
+ul {
+    display: flex;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+    font-family: serif;
+}
+
+li {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+li+li {
+    margin-left: 16px;
+}
+
+li>a {
+    color: #fff;
+    text-decoration: none;
+}
+
+li>a:hover {
+    color: gold;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.support {
+    margin-left: 30px;
+}
+
+.support__text {
+    margin-left: 40px;
+    font-size: 10px;
+    font-family: serif;
+    color: gold;
+}
+
+.support__dial a {
+    text-decoration: none;
+    margin-left: 40px;
+    font-size: 32px;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    color: gold;
+}
+
+/*--背景--*/
+main {
+    width: 1200px;
+    height: 900px;
+    margin: 0 auto;
+    letter-spacing: 0.1em;
+    z-index: 1;
+    padding-top: 150px;
+}
+
+.back__image {
+    position: relative;
+    position: fixed;
+    width: 1200px;
+    height: 800px;
+    margin: 100px 0 0 650px;
+    background-image: url("../img/Qmark.png");
+    background-size: 600px 600px;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 150px;
+    z-index: -1;
+    animation: fadeIn 6s 1s forwards;
+    opacity: 0;
+}
+
+.back__touka {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
+/*--代表挨拶--*/
+h1 {
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding-bottom: 80px;
+    font-family: serif;
+}
+
+h1>span {
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.2em;
+    padding: 0 55px;
+}
+
+h1>span::before,
+h1>span::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 60px;
+    height: 3px;
+    background-color: black;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+h1>span:before {
+    left: -15px;
+}
+
+h1>span:after {
+    right: -10px;
+}
+
+.greeting__box {
+    animation: fadeIn 6s 1s forwards;
+    opacity: 0;
+}
+
+.greeting__box>p {
+    font-size: 24px;
+    line-height: 1.5em;
+    margin-bottom: 1.2em;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.sign {
+    display: flex;
+    justify-content: end;
+    margin-top: 60px;
+}
+
+.sign__logo {
+    display: block;
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+    margin-top: -10px;
+    margin-left: -30px;
+}
+
+.sign__name {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1.1em;
+    letter-spacing: 0.5em;
+    font-family: "myfont-windows";
+    margin-left: 40px;
+}
+
+@font-face {
+    font-family: "myfont-windows";
+    src: url("../fonts/衡山毛筆フォント.ttf") format("truetype");
+}
+
+/*--会社概要--*/
+section {
+    width: 1200px;
+    margin: 80px auto 100px;
+    letter-spacing: 0.1em;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    border-left: 10px solid black;
+    padding-left: 20px;
+    letter-spacing: 0.1em;
+}
+
+.summary {
+    width: 100%;
+}
+
+.summary th {
+    width: 30%;
+    border-bottom: solid 1px grey;
+    text-align: left;
+    font-size: 24px;
+    line-height: 3em;
+    letter-spacing: 0.3em;
+    font-family: sans-serif;
+    text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.summary td {
+    font-size: 24px;
+    width: 70%;
+    border-bottom: solid 1px grey;
+    /*padding-left: 20px;*/
+    letter-spacing: 0.1em;
+    font-family: sans-serif;
+    text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.access__map {
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+    height: 600px;
+    margin-bottom: 60px;
+}
+
+.access__map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*--フッター--*/
+footer {
+    display: flex;
+    height: 30px;
+    letter-spacing: 0.1em;
+    margin-top: 60px;
+    justify-content: center;
+    font-family: serif;
+    background-color: black;
+    color: #fff;
+}
+
+footer>p {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+footer>p>a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer>p>a:hover {
+    opacity: 0.8;
+}

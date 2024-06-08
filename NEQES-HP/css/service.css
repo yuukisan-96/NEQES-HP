@@ -1,0 +1,213 @@
+/*--アニメーション--*/
+@keyframes fadeIn {
+    0% {}
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/*--ここからヘッダー--*/
+header {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    position: fixed;
+    font-family: serif;
+    font-size: 30px;
+    z-index: 1;
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 15px 0 15px;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.header__logo img {
+    display: block;
+    width: 120px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.header__logo img:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.header__nav {
+    margin-left: auto;
+}
+
+ul {
+    display: flex;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+    font-family: serif;
+}
+
+li {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+li+li {
+    margin-left: 16px;
+}
+
+li>a {
+    color: #fff;
+    text-decoration: none;
+}
+
+li>a:hover {
+    color: gold;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.support {
+    margin-left: 30px;
+}
+
+.support__text {
+    margin-left: 40px;
+    font-size: 10px;
+    font-family: serif;
+    color: gold;
+}
+
+.support__dial a {
+    text-decoration: none;
+    margin-left: 40px;
+    font-size: 32px;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    color: gold;
+}
+
+/*--メイン--*/
+main {
+    width: 1200px;
+    margin: 0 auto;
+    letter-spacing: 0.1em;
+    z-index: 1;
+    padding-top: 150px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.back__image {
+    position: relative;
+    position: fixed;
+    margin: 100px 0 0 650px;
+    width: 1200px;
+    height: 800px;
+    margin: 100px 0 0 650px;
+    background-image: url("../img/Qmark.png");
+    background-size: 600px 600px;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    animation: fadeIn 6s 1s forwards;
+    opacity: 0;
+}
+
+.back__touka {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    border-left: 10px solid black;
+    padding-left: 20px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    font-size: 30px;
+    margin-bottom: 18px;
+    box-shadow: 3px 1px 0 navy;
+    letter-spacing: 0.2em;
+    line-height: 1.2em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.content__card {
+    margin: 60px auto;
+    height: 180px;
+}
+.content__card-inner {
+    display: flex;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.content__card-link>a {
+    color: navy;
+    margin-top: 30px;
+}
+
+.content__card-img img {
+    display: block;
+    width: 100px;
+}
+
+.content__card-text {
+    margin-left: 36px;
+    font-size: 20px;
+    line-height: 1.5em;
+    letter-spacing: 0.1em;
+}
+
+.content__card-link {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 20px;
+    margin-top: -20px;
+}
+
+.content__card-link a {
+    margin-left: 40px;
+}
+
+.content__card-link a:hover {
+    opacity: 0.7;
+}
+
+
+
+/*--フッター--*/
+footer {
+    display: flex;
+    height: 30px;
+    letter-spacing: 0.1em;
+    margin-top: 60px;
+    justify-content: center;
+    font-family: serif;
+    background-color: black;
+    color: #fff;
+}
+
+footer p {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+footer p a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer p a:hover {
+    opacity: 0.8;
+}
